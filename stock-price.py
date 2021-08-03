@@ -23,7 +23,7 @@ def page_config():
 def load_dataroma_data():
     url = 'https://www.dataroma.com/m/ins/ins.php'
     table = pd.read_html(url)
-    df = table[2]
+    df = table[2].dropna()
     return df
 
 
